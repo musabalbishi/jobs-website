@@ -1,22 +1,29 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { Text, Box, Button, ButtonGroup } from "@chakra-ui/react";
 
 function HelpLayout() {
   return (
-    <div className="help-layout">
-      <h2>Help</h2>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
-        veniam possimus odit ab sunt quae suscipit obcaecati harum quis iure
-        quas ipsam illo cum unde perferendis blanditiis voluptate, saepe fugit!
-      </p>
+    <Box p={"3rem"}>
+      <Text
+        fontSize={"2rem"}
+        m={"2rem 0"}
+        color={"#333"}
+        _dark={{ color: "#fff" }}
+      >
+        Help
+      </Text>
 
-      <nav>
-        <NavLink to="faq">View the FAQ</NavLink>
-        <NavLink to="contact">contact us</NavLink>
-      </nav>
+      <ButtonGroup>
+        <Button _active={{ bg: "fff" }}>
+          <NavLink to="faq">FAQ</NavLink>
+        </Button>
+        <Button>
+          <NavLink to="contact">contact us</NavLink>
+        </Button>
+      </ButtonGroup>
 
       <Outlet />
-    </div>
+    </Box>
   );
 }
 
