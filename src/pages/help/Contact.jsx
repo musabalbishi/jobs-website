@@ -1,18 +1,19 @@
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  Button,
+  FormHelperText,
+} from "@chakra-ui/react";
 export default function Contact() {
   return (
-    <div className="contact">
-      <h3>Contact Us</h3>
-      <form>
-        <label>
-          <span>Your email:</span>
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          <span>Your message:</span>
-          <textarea name="message" required></textarea>
-        </label>
-        <button>Submit</button>
-      </form>
-    </div>
+    <FormControl>
+      <FormLabel>Email address</FormLabel>
+      <Input type="email" />
+      <FormLabel>Message</FormLabel>
+      <Input type="textarea" />
+      <Button m={"1rem 0"}>SEND</Button>
+      <FormHelperText>Well never share your email.</FormHelperText>
+    </FormControl>
   );
 }
