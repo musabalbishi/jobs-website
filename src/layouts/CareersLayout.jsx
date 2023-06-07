@@ -1,12 +1,14 @@
 import { Outlet } from "react-router-dom";
+import { Text } from "@chakra-ui/react";
 
 export default function CareersLayout() {
   return (
-    <div className="careers-layout">
-      <h2>Careers</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</p>
+    <>
+      <Text p={"4rem"} fontSize={"2rem"} _dark={{ color: "#fff" }}>
+        Careers
+      </Text>
 
       <Outlet />
-    </div>
+    </>
   );
 }
